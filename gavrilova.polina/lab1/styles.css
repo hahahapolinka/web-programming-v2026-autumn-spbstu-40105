@@ -11,21 +11,20 @@ h1 {
 
 .card {
   display: inline-block;
-  width: 170px;   
-  height: 340px;
+  width: 220px;
+  height: 310px;
   padding: 10px;
   margin-right: 20px;
   vertical-align: top;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
 }
 
-
 .card img {
-  width: 150px;
-  height: 200px;
+  width: 200px;
+  height: 150px;
   display: block;
   object-fit: cover;
   border-radius: 2px;
@@ -34,7 +33,7 @@ h1 {
 .card h3 {
   font-size: 18px;
   font-weight: bold;
-  margin: 15px 0 8px;
+  margin: 10px 0 5px;
   color: #222;
   height: 44px;
 }
@@ -43,7 +42,7 @@ h1 {
   font-size: 14px;
   margin: 0;
   color: #666;
-  line-height: 1;
+  line-height: 1.4;
 
   display: -webkit-box;
   -webkit-line-clamp: 4;
