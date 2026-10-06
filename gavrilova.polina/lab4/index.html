@@ -3,19 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Онлайн-магазин Дикие ягоды</title>
+    <title>Лабораторная работа 4</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main>
       <h1>Лабораторная работа 4</h1>
-      <form data-testid="entity-form">
-        <!-- Добавьте поля name, которые требует ваш вариант. -->
-        <button type="submit">Добавить</button>
-      </form>
+
+      <section class="form-section">
+        <h2>Добавить товар</h2>
+        <form data-testid="entity-form">
+          <input name="id" type="number" placeholder="ID" required />
+          <input name="name" type="text" placeholder="Название" required />
+          <input
+            name="price"
+            type="number"
+            placeholder="Цена"
+            step="0.01"
+            min="0"
+            required
+          />
+          <fieldset>
+            <legend>Категории</legend>
+            <div id="categories-container"></div>
+            <input
+              name="newCategories"
+              type="text"
+              placeholder="Или введите новые через запятую"
+              width="100"
+            />
+          </fieldset>
+          <button type="submit">Добавить товар</button>
+        </form>
+      </section>
+
+      <section class="form-section">
+        <h2>Управление категориями</h2>
+        <form data-testid="category-form">
+          <input name="id" type="number" placeholder="ID товара" required />
+          <input name="category" type="text" placeholder="Категория" required />
+          <button type="submit">Добавить категорию</button>
+        </form>
+      </section>
+
+
       <section
         data-testid="entity-list"
-        aria-label="Список элементов"
+        class="products-list"
+        aria-label="Список товаров"
       ></section>
     </main>
     <script type="module" src="main.js"></script>
