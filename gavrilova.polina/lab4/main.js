@@ -55,7 +55,7 @@ function saveToStorage() {
 
 function renderCategoriesCheckboxes() {
   const container = document.getElementById('categories-container');
-  if (!container) return;
+  if (!container) {return;}
 
   const uniqueCategories = getUniqueCategories(products);
 
@@ -186,7 +186,7 @@ function initCategoryForm() {
     const id = Number(formData.get('id'));
     const category = String(formData.get('category') || '').trim();
 
-    if (!category) return;
+    if (!category) {return;}
 
     const product = products.find((p) => p.id === id);
     if (!product) {
@@ -223,7 +223,7 @@ function initListDelegation() {
       const id = Number(target.getAttribute('data-id'));
       const category = target.getAttribute('data-category');
       const product = products.find((p) => p.id === id);
-      if (!product) return;
+      if (!product) {return;}
 
       await delay(DELAY_MS);
       product.removeCategory(category);

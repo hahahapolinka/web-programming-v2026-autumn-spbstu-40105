@@ -43,9 +43,9 @@ export function getUniqueCategories(products) {
 }
 
 function getPriceRange(price) {
-  if (price < 1000) return '0-999';
-  if (price < 5000) return '1000-4999';
-  if (price < 10000) return '5000-9999';
+  if (price < 1000) {return '0-999';}
+  if (price < 5000) {return '1000-4999';}
+  if (price < 10000) {return '5000-9999';}
   return '10000+';
 }
 
